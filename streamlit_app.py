@@ -49,7 +49,7 @@ if ingredients_list:
 # Display smoothie nutrition
 import requests  
 smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/")
-st.text(smoothiefroot_response.json())
+st.text(smoothiefroot_response)
 
 
 
