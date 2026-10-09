@@ -46,13 +46,17 @@ if ingredients_list:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered, '+name_on_order+ '!', icon="✅")
 
+#import requests  
+#smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
+#st.text(smoothiefroot_response.json)
+#st.write(smoothiefroot_response.status_code)
+#st.write(smoothiefroot_response.text)
+
 import requests  
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-#st.text(smoothiefroot_response.json())
-st.write(smoothiefroot_response.status_code)
-st.write(smoothiefroot_response.text)
-
-
+smoothiefroot_response = requests.get("https://api.github.com")  
+st.text(smoothiefroot_response.json())
+#st.write(smoothiefroot_response.status_code)
+#st.write(smoothiefroot_response.text)
 
 
 
